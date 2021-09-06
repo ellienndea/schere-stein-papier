@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schere-Stein-Papier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- used my accessible burger menu component for the "how to play"
+            with a simple button in place of three stripes -->
+        <div id="div-burger-container">
+                <button id="btn-open-menu" onclick="openMenu()" 
+                aria-label="open menu" aria-pressed="false">Spielanleitung</button>
+            </div>
+            <div id="hidden" class="hidden">
+                <img src="img/game.jpg" alt="Stein besiegt Schere. 
+                Schere besiegt Papier. Papier besiegt Stein.">
+            </div>
+    </header>
+    <main>
+        <div id="main-container">
+            <h1>Schere-Stein-Papier</h1>
+            <div id="scoreboard" aria-live="polite">
+                <div class="player" id="userScore">Spieler  0</div>
+                :
+                <div class="player" id="compScore">Computer 0 </div>
+            </div>
+            <div id="actionMessage">
+                <p></p>
+            </div>
+            <div class="choices">
+                <button class="choice" id="schere">
+                    <img src="img/scissors.png" alt="">
+                </button>
+                <label for="schere" class="visually-hidden">Schere</label>
+                <button class="choice" id="stein">
+                    <img src="img/stone.png" alt="">
+                </button>
+                <label for="stein" class="visually-hidden">Stein</label>
+                <button class="choice" id="papier">
+                    <img src="img/paper.png" alt="">
+                </button>
+                <label for="papier" class="visually-hidden">Papier</label>
+            </div>
+            <div id="result" aria-live="assertive">
+                <p >Du bist dran!</p>
+            </div>
+        </div>
+        
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
